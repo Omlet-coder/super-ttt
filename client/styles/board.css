@@ -1,0 +1,44 @@
+/* styles/board.css */
+
+/* Style for the big board container */
+.big-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* Style for each small board */
+.small-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    border: 2px solid #000;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.small-board.result {
+    display: flex;
+    font-size: 72px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Highlight the current small board */
+.small-board.highlight {
+    background-color: lightblue;
+}
+
+/* Style for each cell */
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-size: 24px;
+    cursor: pointer;
+}

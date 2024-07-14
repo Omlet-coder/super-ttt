@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/board.css">
+    <link rel="stylesheet" href="styles/ui.css">
+</head>
+<body>
+    <h1>Welcome to Super Tic Tac Toe</h1>
+    <h2>Cuurrent player is: <span id="current-player">X</span></h2>
+    <!-- Your HTML content goes here -->
+    <div id="game-board"></div>
+    <!-- JavaScript Files -->
+    <script src="js/state.js"></script>
+    <script src="js/ui.js"></script>
+
+    <script>
+        const gameBoardElement = document.getElementById('game-board');
+        const currentPlayerElement = document.getElementById('current-player');
+        drawTheBoard(gameBoardElement, currentPlayerElement);
+    </script>
+</body>
+</html>
