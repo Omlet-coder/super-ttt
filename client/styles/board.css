@@ -24,6 +24,7 @@
     font-size: 72px;
     align-items: center;
     justify-content: center;
+    min-height: 210px;
 }
 
 /* Highlight the current small board */
