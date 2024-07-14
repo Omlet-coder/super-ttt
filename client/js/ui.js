@@ -1,7 +1,7 @@
 // ui.js
 
 // Function to draw the game board
-function drawTheBoard(parentElement, currentPlayerElement) {
+function drawTheBoard(state, parentElement, currentPlayerElement) {
 
     currentPlayerElement.innerHTML = state.currentPlayer;
    

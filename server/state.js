@@ -1,28 +1,30 @@
 // state.js
 
 // Initialize the game state
-let state = {
-    bigBoardResults: Array(9).fill(null),
-    currentBigBoard: null,
-    gameWins: null,
-    currentPlayer: 'X', // 'X' or 'O'
-    bigBoard: [
-        Array(9).fill(null), // small board 1
-        Array(9).fill(null), // small board 2
-        Array(9).fill(null), // small board 3
-        Array(9).fill(null), // small board 4
-        Array(9).fill(null), // small board 5
-        Array(9).fill(null), // small board 6
-        Array(9).fill(null), // small board 7
-        Array(9).fill(null), // small board 8
-        Array(9).fill(null)  // small board 9
-    ]
-};
+export let state;
 
-
+export function reset() {
+    state = {
+        bigBoardResults: Array(9).fill(null),
+        currentBigBoard: null,
+        gameWins: null,
+        currentPlayer: 'X', // 'X' or 'O'
+        bigBoard: [
+            Array(9).fill(null), // small board 1
+            Array(9).fill(null), // small board 2
+            Array(9).fill(null), // small board 3
+            Array(9).fill(null), // small board 4
+            Array(9).fill(null), // small board 5
+            Array(9).fill(null), // small board 6
+            Array(9).fill(null), // small board 7
+            Array(9).fill(null), // small board 8
+            Array(9).fill(null)  // small board 9
+        ]
+    }
+}
 
 // Function to make a move
-function makeAMove(bigBoardIndex, smallBoardIndex) {
+export function makeAMove(bigBoardIndex, smallBoardIndex) {
     if (state.currentBigBoard !== null && bigBoardIndex !== state.currentBigBoard) {
         return "WrongBigBoard"
     }
@@ -53,10 +55,6 @@ function makeAMove(bigBoardIndex, smallBoardIndex) {
     state.currentPlayer = state.currentPlayer === 'X' ? 'O' : 'X';
 
     return "Continue";
-}
-
-function checkBigBoardWinner() {
-    return checkWinner(state.bigBoardResults)
 }
 
 // Helper function to check for a winner on a small board
